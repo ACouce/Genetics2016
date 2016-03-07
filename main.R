@@ -1,5 +1,5 @@
 # .. This program simulates the experimental measurement of genetic diversity in an asexual, exponentially-expanding population.
-# .. It calls the script 'LD.R' to obtain simulated clone-size distributions and directs the data to the script 'random.R,
+# .. It calls the script 'LD.R' to obtain simulated clone-size distributions and directs the data to the script 'random.R',
 # .. which simulates the random picking of two mutants from these distributions. Diversity is estimated as the Simpson's Index, 
 # .. i.e. the probability of sampling, without reposition, two mutants of the same clone.
 
@@ -28,7 +28,7 @@ rm(list=ls())
  n=0 				# counter of the parameter regimes to be explored
  for (growth_rate in c(1.2,1.6,2,3,5)) { 	# this loop iterates among growth rates  
 	r <- matrix(growth_rate,1,clases) 	# growth rate matrix
-	r[1,1]=2 				# wild-type's mutation rate
+	r[1,1]=2 				# wild-type's growth rate
 	n=n+1 
 
 	for (g in c(1:14)) { 			# this loop iterates among population sizes (generations)
